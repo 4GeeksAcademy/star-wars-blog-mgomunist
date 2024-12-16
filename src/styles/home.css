@@ -1,0 +1,25 @@
+.dropdown-menu[data-bs-popper]{
+    right: 0 !important;
+}
+
+.navbar{
+    background: black;
+}
+
+.col-2{
+    border: 1px solid black;
+}
+
+h2,tr {
+    color: #dc3b4c;
+}
+
+.fa-trash:hover{
+    color: red;
+}
+
+body {
+    background-image: url('https://media4.giphy.com/media/FlodpfQUBSp20/giphy.gif?cid=6c09b9524haz392uivtuqpg936zejwpwu7bptnw6ega90ka9&ep=v1_gifs_search&rid=giphy.gif&ct=g');
+    background-size: auto; 
+    background-position: center;
+}

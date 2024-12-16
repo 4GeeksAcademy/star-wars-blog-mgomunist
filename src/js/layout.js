@@ -5,6 +5,9 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
+import DetailedView  from './views/detailedView.js';
+import PlanetView from "./views/planetView.js";
+import VehicleView from "./views/vehicleView.js";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -24,8 +27,18 @@ const Layout = () => {
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
+						<Route path="/detailedView/:uid" element={<DetailedView />} />
+						<Route path="/planetView/:uid" element={<PlanetView />} />
+						<Route path="/vehicleView/:uid" element={<VehicleView />} />
 						<Route path="/single/:theid" element={<Single />} />
-						<Route path="*" element={<h1>Not found!</h1>} />
+						<Route path="*" element={							
+							<div className="container-fluid position-relative text-center p-0">
+								<div style={{"margin-top":"65px"}} className="position-absolute top-0 start-50 translate-middle-x w-75 bg-dark bg-opacity-50 text-white p-3 rounded">
+									<h1>This isn't the page you are looking for.</h1>
+								</div>
+							</div>							
+							} 
+						/>
 					</Routes>
 					<Footer />
 				</ScrollToTop>
